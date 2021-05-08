@@ -3,6 +3,7 @@ const passport = require('passport');
 const session = require("express-session");
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/User');
+const isLoggedin = require('../middleware');
 //const findOrCreate = require("mongoose-findorcreate");
 
 router.use(
