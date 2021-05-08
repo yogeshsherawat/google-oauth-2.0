@@ -54,6 +54,10 @@ router.get('/auth/google/callback',
         res.redirect('/');
     });
 
+router.get('/', isLoggedin, (req, res) => {
+    res.render('index', { user: req.user });
+})
+
 router.get('/login', (req, res) => {
     res.render('login');
 })
